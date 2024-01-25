@@ -1,0 +1,23 @@
+server:
+  port: 8511
+
+spring:
+  application:
+    name: server
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:server/data/ops-demo.sqlite
+    username:
+    password:
+
+mybatis:
+  type-aliases-package: cn.sqlite.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+
+# Socket Config
+ops:
+  server:
+    port: 8015
+    read-idle-seconds: 10
